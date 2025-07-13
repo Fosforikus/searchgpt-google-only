@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index,follow">
+  <title>TEST A1 – Google uniquement</title>
+</head>
+<body>
+  <h1>🧪 TEST A1 – Indexation par Google uniquement</h1>
+
+  <h2>🔍 Objectif du test</h2>
+  <p>Ce test vise à vérifier si SearchGPT est capable d’accéder à une page web visible uniquement par Google. Le fichier robots.txt interdit l’accès à tous les bots sauf Googlebot. Le contenu contient une phrase absurde unique qui ne figure nulle part ailleurs sur le web.</p>
+
+  <h2>🧾 Phrase absurde à détecter</h2>
+  <p><strong>Le tatou quantique de Viroflay synthétise du gouda fluorescent en base 64 chaque mercredi lunaire.</strong></p>
+
+  <h2>📁 Configuration robots.txt</h2>
+  <pre>
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: *
+Disallow: /
+  </pre>
+
+  <h2>📌 Résultat attendu</h2>
+  <p>La phrase ci-dessus ne devrait être visible que si SearchGPT utilise Google comme moteur de recherche.</p>
+</body>
+</html>
